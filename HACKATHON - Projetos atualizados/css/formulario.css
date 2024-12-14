@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('../imagens/cafe.jpeg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+}
+
+header {
+    background-color: sienna;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#titulo {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+#home {
+    width: 46px;
+    height: 47px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+#home:hover {
+    transform: scale(1.1); /* Animação de aumento ao passar o mouse */
+}
+
+
+#botao_header{
+    border: none;
+    border-radius: 4px;
+    background-color:white;
+}
+
+#botao_header:hover{
+    transform: scale(1.1);
+    background-color: sienna;
+}
+
+#botao_header:active{
+    transform: scale(1);
+}
+
+.imgdepo{
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    left: 45%;
+    border-radius: 50%;
+    border: solid black;
+    top: -40%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.form_box {
+    display: inline-block;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    left: 32px;
+    position: relative;
+}
+
+.form_box .title {
+    padding: 16px 0;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.form_box form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.form_box input,
+.form_box textarea {
+    width: calc(50% - 8px);
+    height: 48px;
+    background-color: sienna;
+    border-radius: 8px;
+    border: 1px solid sienna;
+    padding-left: 16px;
+    font-size: 16px;
+}
+.form_box ::placeholder{color: white;}
+.form_box input[name=name],
+.form_box input[name=email],
+.form_box input[name=subject],
+.form_box textarea {
+    width: 100%;
+}
+
+.form_box textarea {
+    height: 120px;
+    padding: 16px;
+}
+
+.form_box button {
+    display: inline-block;
+    margin: 20px auto;
+    border: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: sienna;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.form_box button:hover {
+    background-color: rgb(128, 57, 25);
+    transform: scale(1.07)
+}
+
+.mapa {
+    width: 600px;
+    height: 450px;
+    border: none;
+    display: inline-block;
+    left: 50%;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Deixar o site responsivo, não precisa mexer*/
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form_box,
+
+    .mapa {
+        width: 100%;
+        max-width: 500px;
+    }
+    .form_box {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form_box input,
+    .form_box textarea {
+        width: 100%;
+    }
+}
+h1{
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+}
+
+.depoimentos{
+    width: 100%;
+    padding: 50px 20px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    top: -1000px;
+    border: solid rgb(8, 8, 8);;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+.depoimentos .slide{
+    padding: 50px 80px;
+    cursor: grab;
+}
+.depoimentos .slide:active{
+    cursor: grabbing;
+}
+
+.depoimentos i{
+    font-size: 80px;
+    color: rgb(92, 92, 92);
+}
+
+.depoimentos .mySwiper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.depoimentos p.depoi-txt{
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+.slide .person{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slide .person img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid sienna;
+}
+
+.swiper-slide .person .info-person {
+    text-align: center;  
+    margin-left: 30px;
+    margin-top: 20px; 
+}
+
+.slide .person p.nome-person{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+.slide .person p.func-person{
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
